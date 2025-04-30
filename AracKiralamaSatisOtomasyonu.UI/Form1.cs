@@ -6,5 +6,11 @@ namespace AracKiralamaSatisOtomasyonu.UI
         {
             InitializeComponent();
         }
+
+        private void btnMusteriIslem_Click(object sender, EventArgs e)
+        {
+            FRMMusteriIslemleri fRMMusteriIslemleri = new();
+            fRMMusteriIslemleri.ShowDialog();
+        }
     }
 }
