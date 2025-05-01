@@ -1,6 +1,6 @@
 ﻿namespace AracKiralamaSatisOtomasyonu.UI
 {
-    partial class Form1
+    partial class FRMMenu
     {
         /// <summary>
         ///  Required designer variable.
