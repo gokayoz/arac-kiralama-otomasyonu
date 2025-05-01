@@ -12,5 +12,11 @@ namespace AracKiralamaSatisOtomasyonu.UI
             FRMMusteriIslemleri fRMMusteriIslemleri = new();
             fRMMusteriIslemleri.ShowDialog();
         }
+
+        private void btnAracIslem_Click(object sender, EventArgs e)
+        {
+            FRMAracIslemleri fRMAracIslemleri = new();
+            fRMAracIslemleri.ShowDialog();
+        }
     }
 }
