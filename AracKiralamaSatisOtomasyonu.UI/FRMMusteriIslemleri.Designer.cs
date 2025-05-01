@@ -30,16 +30,16 @@
         {
             txtAdSoyad = new TextBox();
             label1 = new Label();
-            button1 = new Button();
+            btnEkle = new Button();
             lstvMusteriler = new ListView();
             txtTelefon = new TextBox();
             label2 = new Label();
-            txtEposta = new TextBox();
+            txtEmail = new TextBox();
             label3 = new Label();
             txtAdres = new TextBox();
             label4 = new Label();
-            button2 = new Button();
-            button3 = new Button();
+            btnSil = new Button();
+            btnGuncelle = new Button();
             SuspendLayout();
             // 
             // txtAdSoyad
@@ -58,14 +58,15 @@
             label1.TabIndex = 1;
             label1.Text = "Ad Soyad:";
             // 
-            // button1
+            // btnEkle
             // 
-            button1.Location = new Point(204, 279);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 28);
-            button1.TabIndex = 2;
-            button1.Text = "Ekle";
-            button1.UseVisualStyleBackColor = true;
+            btnEkle.Location = new Point(204, 279);
+            btnEkle.Name = "btnEkle";
+            btnEkle.Size = new Size(94, 28);
+            btnEkle.TabIndex = 2;
+            btnEkle.Text = "Ekle";
+            btnEkle.UseVisualStyleBackColor = true;
+            btnEkle.Click += btnEkle_Click;
             // 
             // lstvMusteriler
             // 
@@ -74,6 +75,7 @@
             lstvMusteriler.Size = new Size(758, 400);
             lstvMusteriler.TabIndex = 3;
             lstvMusteriler.UseCompatibleStateImageBehavior = false;
+            lstvMusteriler.DoubleClick += lstvMusteriler_DoubleClick;
             // 
             // txtTelefon
             // 
@@ -91,12 +93,12 @@
             label2.TabIndex = 1;
             label2.Text = "Telefon:";
             // 
-            // txtEposta
+            // txtEmail
             // 
-            txtEposta.Location = new Point(255, 125);
-            txtEposta.Name = "txtEposta";
-            txtEposta.Size = new Size(349, 27);
-            txtEposta.TabIndex = 0;
+            txtEmail.Location = new Point(255, 125);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(349, 27);
+            txtEmail.TabIndex = 0;
             // 
             // label3
             // 
@@ -124,23 +126,25 @@
             label4.TabIndex = 1;
             label4.Text = "Adres:";
             // 
-            // button2
+            // btnSil
             // 
-            button2.Location = new Point(341, 279);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 28);
-            button2.TabIndex = 2;
-            button2.Text = "Sil";
-            button2.UseVisualStyleBackColor = true;
+            btnSil.Location = new Point(341, 279);
+            btnSil.Name = "btnSil";
+            btnSil.Size = new Size(94, 28);
+            btnSil.TabIndex = 2;
+            btnSil.Text = "Sil";
+            btnSil.UseVisualStyleBackColor = true;
+            btnSil.Click += btnSil_Click;
             // 
-            // button3
+            // btnGuncelle
             // 
-            button3.Location = new Point(476, 279);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 28);
-            button3.TabIndex = 2;
-            button3.Text = "Güncelle";
-            button3.UseVisualStyleBackColor = true;
+            btnGuncelle.Location = new Point(476, 279);
+            btnGuncelle.Name = "btnGuncelle";
+            btnGuncelle.Size = new Size(94, 28);
+            btnGuncelle.TabIndex = 2;
+            btnGuncelle.Text = "Güncelle";
+            btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.Click += btnGuncelle_Click;
             // 
             // FRMMusteriIslemleri
             // 
@@ -148,19 +152,21 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(782, 753);
             Controls.Add(lstvMusteriler);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnGuncelle);
+            Controls.Add(btnSil);
+            Controls.Add(btnEkle);
             Controls.Add(label4);
             Controls.Add(txtAdres);
             Controls.Add(label3);
-            Controls.Add(txtEposta);
+            Controls.Add(txtEmail);
             Controls.Add(label2);
             Controls.Add(txtTelefon);
             Controls.Add(label1);
             Controls.Add(txtAdSoyad);
             Name = "FRMMusteriIslemleri";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FRMMusteriIslemleri";
+            Load += FRMMusteriIslemleri_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,15 +175,15 @@
 
         private TextBox txtAdSoyad;
         private Label label1;
-        private Button button1;
+        private Button btnEkle;
         private ListView lstvMusteriler;
         private TextBox txtTelefon;
         private Label label2;
-        private TextBox txtEposta;
+        private TextBox txtEmail;
         private Label label3;
         private TextBox txtAdres;
         private Label label4;
-        private Button button2;
-        private Button button3;
+        private Button btnSil;
+        private Button btnGuncelle;
     }
 }
