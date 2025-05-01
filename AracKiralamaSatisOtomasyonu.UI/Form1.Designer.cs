@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            btnAracIslem = new Button();
             button2 = new Button();
             button3 = new Button();
             btnMusteriIslem = new Button();
             SuspendLayout();
             // 
-            // button1
+            // btnAracIslem
             // 
-            button1.Location = new Point(148, 153);
-            button1.Name = "button1";
-            button1.Size = new Size(118, 103);
-            button1.TabIndex = 0;
-            button1.Text = "Araçlar Form";
-            button1.UseVisualStyleBackColor = true;
+            btnAracIslem.Location = new Point(148, 153);
+            btnAracIslem.Name = "btnAracIslem";
+            btnAracIslem.Size = new Size(118, 103);
+            btnAracIslem.TabIndex = 0;
+            btnAracIslem.Text = "Araç İşlemleri";
+            btnAracIslem.UseVisualStyleBackColor = true;
+            btnAracIslem.Click += btnAracIslem_Click;
             // 
             // button2
             // 
@@ -79,15 +80,16 @@
             Controls.Add(btnMusteriIslem);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnAracIslem);
             Name = "Form1";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "FRMMenu";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button1;
+        private Button btnAracIslem;
         private Button button2;
         private Button button3;
         private Button btnMusteriIslem;
