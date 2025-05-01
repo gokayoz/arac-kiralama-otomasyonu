@@ -1,8 +1,8 @@
 namespace AracKiralamaSatisOtomasyonu.UI
 {
-    public partial class Form1 : Form
+    public partial class FRMMenu : Form
     {
-        public Form1()
+        public FRMMenu()
         {
             InitializeComponent();
         }
