@@ -156,6 +156,8 @@ namespace AracKiralamaSatisOtomasyonu.UI
                 FormuTemizle();
             }
         }
+
+
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             if (seciliArac == null)
@@ -183,6 +185,27 @@ namespace AracKiralamaSatisOtomasyonu.UI
 
             AraclariYukle();
             FormuTemizle();
+        }
+
+        private void FiltrelemeMevcutDurum()
+        {
+            cmbMevcutDurumlar.Items.Clear();
+
+            if (cmbDurumlar.Text == "Kiralık")
+            {
+                cmbMevcutDurumlar.Items.Add("Boşta");
+                cmbMevcutDurumlar.Items.Add("Kiralandı");
+            }
+            else if (cmbDurumlar.Text == "Satılık")
+            {
+                cmbMevcutDurumlar.Items.Add("Boşta");
+                cmbMevcutDurumlar.Items.Add("Satıldı");
+            }
+
+            if (cmbMevcutDurumlar.Items.Count > 0)
+            {
+                cmbMevcutDurumlar.SelectedIndex = 0;
+            }
         }
 
         private bool GirdiKontrol()
@@ -260,6 +283,11 @@ namespace AracKiralamaSatisOtomasyonu.UI
                 return false;
             }
             return true;
+        }
+
+        private void cmbDurumlar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FiltrelemeMevcutDurum();
         }
     }
 }

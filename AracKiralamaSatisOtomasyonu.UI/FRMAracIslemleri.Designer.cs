@@ -231,6 +231,7 @@
             cmbDurumlar.Name = "cmbDurumlar";
             cmbDurumlar.Size = new Size(459, 28);
             cmbDurumlar.TabIndex = 2;
+            cmbDurumlar.SelectedIndexChanged += cmbDurumlar_SelectedIndexChanged;
             // 
             // cmbMevcutDurumlar
             // 
